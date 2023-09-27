@@ -2,6 +2,36 @@
   margin: 0;
   padding: 0;
 }
+.home{
+  background-image: url('../src/image/bg.avif');
+}
+.header{
+  height: 10vh;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px red solid;
+  height: 40vh;
+}
+.div-footer{
+  display: flex;
+  justify-content:center;
+  align-items:end;
+  border: 2px rgb(64, 0, 255) solid;
+  height: 10vh;
+}
+.footer-btn{
+  height: 5vh;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+.footer-a{
+  text-decoration: inherit;
+  margin-left: 5px;
+  color: azure;
+}
 
 .welcome {
   text-align: center;
