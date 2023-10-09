@@ -16,4 +16,5 @@ const config = {
 const app = firebase.initializeApp(config)
 export const auth = app.auth(); //give auth object that we can use to interact with firebase
 export const database = app.database();
+export const storage =app.storage();
 

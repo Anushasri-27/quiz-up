@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import firebase from "firebase/app";
-import intro from "../image/intro-img.jpg";
+import intro from "../image/intro-img.png";
 import { Alert, Button, Col, Container, Grid, Icon, Panel, Row } from "rsuite";
 import { auth, database } from "../misc/firebase";
-import {Link} from 'react-router-dom';
+
 import { useProfile } from "../context/profile.context";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -37,7 +37,7 @@ const SignIn = () => {
   };
 
   return (
-    <Container>
+    <Container className="sign-up-wrap">
       <Grid>
         <Row>
           <Col xs={24} md={12} mdOffset={6}>

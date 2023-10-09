@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width:thin;
+}
+body{
+    background-image: url('../image/login-bg.jpg');
+}
+a{
+    text-decoration:  inherit;
+    color: inherit;
+}
+.start-app{
+    min-height: 98.5vh;
+    border: 8px solid rgb(58, 58, 57);
+    margin: 5px;
+    padding: 5px;
+}
+.quiz-setting-title{
+    font-size: 30px;
+}

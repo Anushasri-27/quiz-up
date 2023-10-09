@@ -2,32 +2,65 @@
   margin: 0;
   padding: 0;
 }
-.home{
-  background-image: url('../src/image/bg.avif');
+a{
+  text-decoration: none;
 }
-.header{
+.avatar-label{
+  cursor: pointer;
+  display: block;
+  padding: auto;
+}
+.avatar-input{
+   display: none;
+}
+.avatar-img{
+  width: fit-content;
+  height: fit-content;
+  border: 2px green dashed;
+}
+
+.user-name{
+  font-size: 60px;
+  font-weight: bolder;
+  color: rgb(8, 3, 1);
+  text-shadow: 1px 1px 10px rgb(88, 84, 84);
+}
+.home {
+  background-image: url('../src/image/login-bg.jpg');
+}
+
+.header {
   height: 10vh;
+  text-align: center;
 }
-.content{
+
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px red solid;
+ 
   height: 40vh;
 }
-.div-footer{
+
+.div-footer {
   display: flex;
-  justify-content:center;
-  align-items:end;
-  border: 2px rgb(64, 0, 255) solid;
+  justify-content: center;
+  align-items: end;
   height: 10vh;
 }
-.footer-btn{
+
+.footer-btn {
   height: 5vh;
   font-size: larger;
   margin-bottom: 10px;
+  box-shadow: 1px 1px 10px rgb(98, 92, 4);
+
 }
-.footer-a{
+.footer-btn:hover{
+  box-shadow: 1px 1px 10px rgb(245, 245, 240);
+}
+
+.footer-a {
   text-decoration: inherit;
   margin-left: 5px;
   color: azure;
@@ -35,18 +68,51 @@
 
 .welcome {
   text-align: center;
+  color: black;
+  text-shadow: 1px 1px 3px rgb(221, 27, 186);
+  font-weight: bolder;
+}
+
+.welcome p{
+  font-size: 30px;
+  color: black;
 }
 
 .App {
   background-color: brown;
 }
 
-.into {
-  height: 400px;
+.into{
+  height: 500px;
   width: 500px;
 }
+.sign-up-wrap{
+  background-color: rgba(240, 255, 255, 0.401);
+  backdrop-filter: blur(3px);
+  height: 100vh;
+}
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
+  .welcome {
+    margin-top: 160px;
+    text-align: center;
+  }
+
+  .into {
+    height: 400px;
+    width: 100%;
+  }
+  .user-name{
+    font-size: 20px;
+  }
+  .sign-up-wrap{
+    background-color: rgba(240, 255, 255, 0.401);
+    backdrop-filter: blur(1px);
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   .welcome {
     margin-top: 160px;
     text-align: center;
@@ -56,4 +122,14 @@
     height: 300px;
     width: 100%;
   }
+  .user-name{
+    font-size: 20px;
+   
+  }
+  .sign-up-wrap{
+    background-color: rgba(240, 255, 255, 0.401);
+    backdrop-filter: blur(1px);
+    height: 100vh;
+  }
 }
+
