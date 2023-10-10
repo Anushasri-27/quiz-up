@@ -21,9 +21,10 @@ a{
 
 .user-name{
   font-size: 60px;
+ 
   font-weight: bolder;
   color: rgb(8, 3, 1);
-  text-shadow: 1px 1px 10px rgb(88, 84, 84);
+  text-shadow: 1px 1px 10px rgb(236, 230, 231);
 }
 .home {
   background-image: url('../src/image/login-bg.jpg');
@@ -64,6 +65,13 @@ a{
   text-decoration: inherit;
   margin-left: 5px;
   color: azure;
+}
+
+.start-wrap{
+  background-color: rgba(240, 255, 255, 0.401);
+  backdrop-filter: blur(2px);
+  height: 100vh;
+  
 }
 
 .welcome {

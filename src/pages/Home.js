@@ -10,8 +10,8 @@ import AvatarUploadBtn from "../component/AvatarUploadBtn";
 import Score from "../component/Score";
 import StartBtn from "../component/StartBtn";
 const Home = () => {
+ 
   const { profile, isLoding } = useProfile();
-  console.log(profile, isLoding);
   const onSignOut = useCallback(() => {
     auth.signOut();
     alert("you are signed out", 5000);
@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Container>
+      <Container className="start-wrap">
         <Header>
           <Grid>
             <Row>
