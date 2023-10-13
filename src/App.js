@@ -6,8 +6,22 @@ import Home from "./pages/Home";
 import { ProfileProvider } from "./context/profile.context";
 import Start from "../src/pages/Start";
 import PageNotFound from "./pages/PageNotFound";
-import Result from '../src/pages/Result';
+import Result from "../src/pages/Result";
+import { useState } from "react";
+import Quiz from "../src/pages/Quiz";
+import axios from "axios";
 function App() {
+  const [name, setName] = useState("");
+  const [questions, setQuestion] = useState();
+  const [score, setScore] = useState(0);
+  const fetchQuestion = async (category = "", difficulty = "") => {
+    const { data } = await axios.get(
+      `https://opentdb.com/api.php?amount=10${category && `&category=${category}`}&difficulty=medium&type=multiple`
+    );
+    console.log(data);
+    console.log(category);
+    console.log(difficulty);
+  };
   return (
     <ProfileProvider>
       <Switch>
@@ -18,10 +32,13 @@ function App() {
           <Home />
         </Route>
         <Route path="/start">
-          <Start />
+          <Start name={name} setName={setName} fetchQuestion={fetchQuestion} />
         </Route>
         <Route path="/result">
           <Result />
+        </Route>
+        <Route path="/quiz">
+          <Quiz />
         </Route>
         <Route path="*">
           <PageNotFound />

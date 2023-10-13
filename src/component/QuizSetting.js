@@ -8,11 +8,16 @@ import { useHistory } from "react-router-dom";
 import ErrorMessage from "./ErrorMessage";
 
 
+
+
 const QuizSetting = ({name ,setName ,fetchQuestion}) => {
+
   const history = useHistory();
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
+  
+ 
 
   const handleSubmit = () =>{
     if(!category ||!difficulty || !name){

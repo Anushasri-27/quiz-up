@@ -4,18 +4,15 @@ import '../styles/start.css';
 import Header from '../component/Header';
 import QuizSetting from '../component/QuizSetting';
 import { useProfile } from "../context/profile.context";
-const  Start = () => {
-  const { profile, isLoding } = useProfile();
-
-  console.log(profile);
-  const [name , setName] = useState(profile.name);
+const  Start = ({name ,setName ,fetchQuestion}) => {
+  
 
   return (
     <div className='start-app'>
           <Header />
-          <QuizSetting name={name} setName={setName} />
+          <QuizSetting name={name} setName={setName} fetchQuestion={fetchQuestion} />
     </div>
   )
 }
 
-export default Start
+export default Start;
